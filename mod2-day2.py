@@ -1,14 +1,14 @@
-# # import random
-# from random import choice, randint
+# import random
+from random import choice, randint
 
-# # from helpers.helpers import name, add_two, Human
-# # from helpers.helpers2 import add_four, add_six, add_eight as more_eight
+from helpers.helpers import name, add_two, Human
+from helpers.helpers2 import add_four, add_six, add_eight as more_eight
 
-# from helpers import name, add_two, add_four, add_six, add_eight as more_eight, add_ten
-# vals = [1, 2, 3, 4, 5]
+from helpers import name, add_two, add_four, add_six, add_eight as more_eight, add_ten, Human
+vals = [1, 2, 3, 4, 5]
 
-# def add_eight():
-#     pass
+def add_eight():
+    pass
 
 # print(choice(vals))
 # print(randint(1, 5))

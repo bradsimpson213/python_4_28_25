@@ -33,17 +33,17 @@
 # 333333
 
 # 3
-def main_func(num):
-    print("Start")
-    for val in range(num): #  [0, 1, 2, 3, 4, 5]
-        print("% ", end="") #
+# def main_func(num):
+#     print("Start")
+#     for val in range(num): #  [0, 1, 2, 3, 4, 5]
+#         print("% ", end="") #
 
-    for val in range(num - 2): # [0, 1, 2, 3]
-        print("$ ", end="")  #
+#     for val in range(num - 2): # [0, 1, 2, 3]
+#         print("$ ", end="")  #
 
-    print("End")    
+#     print("End")    
 
-main_func(6)
+# main_func(6)
 
 
 # from random import random
@@ -53,3 +53,41 @@ main_func(6)
 #     print(num)
 #     if num == 1.0:
 #         break
+
+
+# Problem 1
+names = ["Mike", "Jennie", "Frank", "Emily", "Todd", "Maria"]
+
+# print(names[3])
+# print(names[1:5])
+# print(names[-3:])
+# print(names[::])
+# print(names[::2])
+# print(names[1::2])
+# print(names[::-1])
+
+# Problem 2
+# nums = [1, 2, 3, 4]
+
+# for num in nums:
+#     if num % 2 == 0:
+#         print("even", end=" ")
+
+# else:
+#     print("Done!")
+
+# # Problem 3
+
+people = [
+    {"name": "Tom", "age": 24},
+    {"name": "Rob", "age": 27},
+    {"name": "Dan", "age": 35},
+    {"name": "Bill", "age": 43},
+    {"name": "Dominic", "age": 21},
+]
+ages = []
+for person in people:
+    if person['age'] > 25:
+        ages.append(person["age"])
+
+print(ages)
