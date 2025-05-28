@@ -81,7 +81,7 @@ from time import sleep
 
 # guessing GAME
 
-# import random
+import random
 
 
 def guessing_game():
@@ -110,9 +110,9 @@ def guessing_game():
     print(f'You have used up all your guesses.  Sorry you lost.  The number was {winning_guess}')
 
 
-# print(guessing_game())
+print(guessing_game())
 
 
-print(10 / 3, end="")
-print(10 // 3, 10 % 3, end="")
+# print(10 / 3, end="")
+# print(10 // 3, 10 % 3, end="")
 
