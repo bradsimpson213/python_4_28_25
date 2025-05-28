@@ -74,17 +74,17 @@
 #     index += 1
 
 
-# image_data = [
-#     [[25, 50, 75],
-#      [25, 50, 75],
-#      [50, 75, 100]],
-#     [[30, 35, 250],
-#      [],
-#      []],
-#     [[40, 45, 90],
-#      [],
-#      []],
-# ]
+image_data = [
+    [[25, 50, 75],
+     [25, 50, 75],
+     [50, 75, 100]],
+    [[30, 35, 250],
+     [],
+     []],
+    [[40, 45, 90],
+     [],
+     []],
+]
 # print(image_data[0][0][0])
 
 
@@ -116,8 +116,8 @@ tup += tup + ("red", "blue")    # no error, this works
 # print(tuple(enumerate(tup)))
 # print(list(enumerate(tup)))
 
-# for index, value in enumerate(tup, 1):
-#     print(f"{index}. {value}")
+for index, value in enumerate(tup, 1):
+    print(f"{index}. {value}")
 
 
 # def sum_and_average(nums) -> tuple:
@@ -136,7 +136,21 @@ tup += tup + ("red", "blue")    # no error, this works
 # num_1, num_2, _ = (1, 2, 3)
 # print(num_1, num_2)
 
-# DAYS = ("Mon", "Tues", "Wed", "Thurs", "Fri")
+DAYS = ("Mon", "Tues", "Wed", "Thurs", "Fri")
+
+def in_function(iterable, value) -> list:
+    """how the built in "IN" keyword works"""
+    found = False
+
+    for item in iterable:
+        if item  == value:
+            found = True
+            break
+
+    return found
+
+print("Wed" in DAYS)
+print(in_function(DAYS, "Wed"))
 # DAYS = "Bleh"
 
 
@@ -158,6 +172,7 @@ my_dict = {
     "age": "old",
     4: "the number 4",
     1: "one",
+    True: "one",
     (1,2): "tuple good for grids",
 }
 
@@ -230,7 +245,7 @@ def summer(num_1, num_2, num_3=10, *args, **kwargs):
         total += kwarg
     return total
 
-# print(summer(5, 10, 15, 20, 25, 30, 35, 46, num_9=50, num_10=75))
+print(summer(5, 10, 15, 20, 25, 30, 35, 46, num_9=50, num_10=75))
 
 
 # print(summer(5, 10, 15))
@@ -248,6 +263,7 @@ def summer(num_1, num_2, num_3=10, *args, **kwargs):
 
 # EMPTY SET
 # new_set = set()
+
 
 # new_set.add(2)
 # new_set.add(3)
@@ -268,6 +284,8 @@ def summer(num_1, num_2, num_3=10, *args, **kwargs):
 set_a = {1, 2, 3, 4, 5}
 set_b = {4, 5, 6, 7, 8}
 
+
+
 # UNION\
 # print(set_a | set_b)
 # print(set_a.union(set_b))
@@ -287,9 +305,9 @@ set_b = {4, 5, 6, 7, 8}
 
 # SPLAT *
 
-# my_list = [1, 2, 3, 4, 5]
+# my_list = [2, 3, 4, 5]
 # my_list2 = [*my_list]
-# # my_list2 = my_list
+# my_list2 = my_list
 # print(my_list2)
 # my_dict = {
 #     "breakfast": "eggs",
@@ -304,14 +322,17 @@ set_b = {4, 5, 6, 7, 8}
 # FILTER
 scores = [90, 87, 92, 95, 76, 69, 84, 90]
 
-# def a_grades(grade):
-#     return grade >= 90
+def a_grades(grade):
+    return grade >= 90
 
-# higher_grades = filter(a_grades, scores)
-# higher_grades = filter(lambda grade: grade >= 90, scores)
+higher_grades = filter(a_grades, scores)
+higher_grades = filter(lambda grade: grade >= 90, scores)
 
-# print(higher_grades)
-# print(list(higher_grades))
+print(higher_grades)
+print(list(higher_grades))
+
+for grade in set(higher_grades):
+    pass
 
 
 # names = ["JAMES", "julie", "Ana", "Ria"]
@@ -342,9 +363,33 @@ def num_to_letter(num) -> str:
 
 scores = [90, 87, 92, 95, 76, 69, 84, 90, 50]
 
-# mapped_scores = map(lambda val: val + 5,scores)
+mapped_scores = map(lambda val: val + 5,scores)
 mapped_scores = map(num_to_letter, scores)
 
-print(mapped_scores)
-print(list(mapped_scores))
+# print(mapped_scores)
+# print(list(mapped_scores))
 
+# nums = [ 2, 3, 4, 5, 6, 7, 8, 9, 10 ] 
+
+# What is the expected output of the following code? 
+
+nums = set([1, 2, 2, 3, 3, 4, 4, 5]) 
+
+# print(sum(nums)) 
+
+
+# What is the expected output of the following code? 
+
+nums = 1,2,3,4,5 
+
+# print(sum(nums)) 
+
+# Which of the following choices will print the “vals” list in reversed order?? 
+
+vals = [ 5, 4, 3, 2, 1] 
+
+# What data type will the following code print to the terminal? 
+
+my_list = [1, 2, 3, 4, 5 ] 
+
+# print(my_list[1:4]) 
