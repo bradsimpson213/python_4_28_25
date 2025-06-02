@@ -43,7 +43,7 @@ def handle_guess(stages, chances, display, guesses) -> str:
 
      # while loop for guessing
     while bad_guess:
-        user_guess = int(input('Guess a letter: ').lower())
+        user_guess = input('Guess a letter: ').lower()
         os.system("cls")
 
         if len(user_guess) != 1:
@@ -82,7 +82,7 @@ def play_snowman() -> None:
     # display = []
     # for letter in range(len(winning_word)):
     #     display.append("_")
-
+    # _ _ _ _ _ 
     # print(stages[chances])
 
     # print(" ".join(display))

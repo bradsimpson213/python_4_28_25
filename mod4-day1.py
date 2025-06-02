@@ -18,10 +18,8 @@
 #     print("Avengers Assemble!")
 #     print('World is saved!')
 
-
-
 # num = 0
-
+# print(5/num)
 # try:
 #     print("in the try block")
 #     print(5/num)
@@ -62,6 +60,9 @@
 # 4. iterate([4, 5]) -> print(2)
 # 5. iterate([5]) -> print(2)
 # 6. iterate([])
+
+
+
 # def lunch_picker():
 #     lunches = ["Wings", 'Pizza', 'Chicken Sandwich']
 
@@ -137,12 +138,12 @@ def guessing_game():
 
 # filter_vals = filter(lambda val: val %2 == 0, vals)
 # print(list(filter_vals))
-# filter_comp_vals = [val * 2 for val in vals if val % 2 == 0]
+# filter_comp_vals = [val for val in vals if val % 2 == 0]
 # print(filter_comp_vals)
 
 # File
 
-file = open("story.txt", 'r')
+# file = open("story.txt")
 # print(file)
 # print(list(file))
 
@@ -156,6 +157,8 @@ file = open("story.txt", 'r')
 
 # line_content = file.readline()
 # print(line_content)
+# line_content = file.readline()
+# print(line_content)
 # line_content2 = file.readline()
 # print(line_content2)
 
@@ -164,6 +167,7 @@ file = open("story.txt", 'r')
 # print("file closed", file.closed)
 # file.close()
 # print("file closed", file.closed)
+
 
 # clean_lines = [line.rstrip() for line in all_lines]
 # print(clean_lines)
@@ -178,39 +182,119 @@ file = open("story.txt", 'r')
 # print(line_content)
 
 
-
-
 # This is a lovely story
 # about a cat...
 # And then there was a dog
 # and he was there too...
 # and then there was also a mouse...
 
-new_file = open("morestory.txt", 'w')
+# new_file = open(f"story.txt", 'x')
 
-new_file.write("We were here and we wrote this! \n")
+# new_file = open("morestory.txt", 'w')
 
-new_file.close()
+# new_file.write("We were here and we wrote this! \n")
 
-new_file_again = open("morestory.txt", 'a')
+# new_file.close()
 
-new_file_again.write("This will be a new line of text")
+# new_file_again = open("morestory.txt", 'a')
 
-new_file_again.close()
+# new_file_again.write("One more new line of text...\n")
+
+# new_file_again.close()
 
 
-new_file_again = open("morestory.txt", 'r+')
+# new_file_again = open("morestory.txt", 'r+')
 
-new_file_again.seek(40)
-# sample_line = new_file_again.readline()
-# print(sample_line)
-new_lines = [
-    "Sit right back and you'll hear a tale \n",
-    "A tale of a fatefull trip \n",
-    "That started from the topic port \n"
-    "And this tiny ship"
-]
-# new_file_again.write("New text here")
-new_file_again.writelines(new_lines)
+# new_file_again.seek(40)
+# # sample_line = new_file_again.readline()
+# # print(sample_line)
+# new_lines = [
+#     "Sit right back and you'll hear a tale \n",
+#     "A tale of a fatefull trip \n",
+#     "That started from the topic port \n"
+#     "And this tiny ship"
+# ]
+# new_file_again.write("New text here \n")
+# new_file_again.writelines(new_lines)
 
-new_file_again.close()
+# new_file_again.close()
+
+# with open("story.txt") as file:
+#     print("closed", file.closed)
+#     content = file.read()
+#     print(content)
+
+
+# print("closed", file.closed)
+# from csv import reader, DictReader
+
+# with open("sales_data.csv") as file:
+#     # csv_list = reader(file)
+#     # print(list(csv_list))
+#     csv_dict = DictReader(file, fieldnames=["row 1", 'row 2', 'row 3'])
+#     csv_list = list(csv_dict)
+#     csv_list.pop(0)
+#     print(csv_list)
+#     # print(csv_dict.items())
+
+
+# SALES PRACTICE PROBLEM
+
+# from csv import DictReader, writer
+
+# with open("sales_data.csv") as file:
+#     # csv_list = reader(file)
+#     # print(list(csv_list))
+#     csv_dict = DictReader(file)
+#     all_sales = DictReader(file)
+#     # print("all sales data", list(all_sales))
+
+#     sum_sales = {}
+
+#     for item in all_sales:
+#         # print("ITEM", item)
+#         if item["Type"] not in sum_sales:
+#             sum_sales[item['Type']] = int(item["Sales"])
+#         else:
+#             sum_sales[item['Type']] += int(item["Sales"])
+
+#         # print("SUMMARY", sum_sales)
+
+#     print("sum_sales", sum_sales)
+
+#     with open("summary_sales.txt", "x") as results:
+#         summary_data = writer(results)
+
+#         summary_data.writerow(["Category", "Total Sales"])
+
+#         for key, value in sum_sales.items():
+#             summary_data.writerow([key, value])
+
+
+
+# def error_in_funct() :
+#     raise Exception("This is an error")
+
+
+# error_in_funct()
+
+from csv import DictReader, writer
+
+with open("sales_data.csv") as file:
+    all_sales = DictReader(file)
+
+    sum_sales = {}
+
+    for item in all_sales:
+        if item["Type"] not in sum_sales:
+            sum_sales[item['Type']] = int(item["Sales"])
+        else:
+            sum_sales[item['Type']] += int(item["Sales"])
+
+    with open("summary_sales.txt", "w") as results:
+        summary_data = writer(results)
+
+        summary_data.writerow(["Category", "Total Sales"])
+
+        for key, value in sum_sales.items():
+            summary_data.writerow([key, value])

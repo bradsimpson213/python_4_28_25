@@ -1,0 +1,5 @@
+Category,Total Sales
+Clothing,250
+Electronics,1075
+Books,30
+Stationery,30
