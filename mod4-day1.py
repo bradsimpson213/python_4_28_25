@@ -12,33 +12,33 @@
 
 
 
-# # Exceptions & Try/Except
+# Exceptions & Try/Except
 
-# def save_the_world():
-#     print("Avengers Assemble!")
-#     print('World is saved!')
+def save_the_world():
+    print("Avengers Assemble!")
+    print('World is saved!')
 
-# num = 0
-# print(5/num)
-# try:
-#     print("in the try block")
-#     print(5/num)
+num = 0
+print(5/num)
+try:
+    print("in the try block")
+    print(5/num)
 
-# except ZeroDivisionError:
-#     print("ZERO division error, you cannot divide by zero in math")
-#     print(f"Did you mean to divide 5 by 1 instead to get {5/1}")
+except ZeroDivisionError:
+    print("ZERO division error, you cannot divide by zero in math")
+    print(f"Did you mean to divide 5 by 1 instead to get {5/1}")
 
-# except TypeError:
-#     print("We can't divide by words or letters")
+except TypeError:
+    print("We can't divide by words or letters")
 
-# # except:
-# #     print("You have made an error")
+# except:
+#     print("You have made an error")
 
-# else:
-#     print("YAY! our math worked!!!")
+else:
+    print("YAY! our math worked!!!")
 
-# finally:
-#     print("We will always see this code")
+finally:
+    print("We will always see this code")
 
 
 
@@ -63,16 +63,16 @@
 
 
 
-# def lunch_picker():
-#     lunches = ["Wings", 'Pizza', 'Chicken Sandwich']
+def lunch_picker():
+    lunches = ["Wings", 'Pizza', 'Chicken Sandwich']
 
-#     lunch_choice = input("What would you like to eat for lunch today?")
+    lunch_choice = input("What would you like to eat for lunch today?")
 
-#     if lunch_choice not in lunches:
-#         raise Exception("Lunch Error we do not have that on the menu today")
+    if lunch_choice not in lunches:
+        raise Exception("Lunch Error we do not have that on the menu today")
 
-#     else:
-#         print(f"enjoy your {lunch_choice}")
+    else:
+        print(f"enjoy your {lunch_choice}")
 
 # lunch_picker()
 
@@ -124,7 +124,7 @@ def guessing_game():
 
 # List Comprehensions
 
-# vals = [1, 2, 3, 4, 5]
+vals = [1, 2, 3, 4, 5]
 # names = ["brad", 'nicole', 'davon', 'cieneh']
 # copy_vals = [val for val in vals]
 # print(copy_vals)
@@ -138,12 +138,12 @@ def guessing_game():
 
 # filter_vals = filter(lambda val: val %2 == 0, vals)
 # print(list(filter_vals))
-# filter_comp_vals = [val for val in vals if val % 2 == 0]
+filter_comp_vals = [val for val in vals if val % 2 == 0]
 # print(filter_comp_vals)
 
 # File
 
-# file = open("story.txt")
+file = open("story.txt")
 # print(file)
 # print(list(file))
 
@@ -219,56 +219,56 @@ def guessing_game():
 
 # new_file_again.close()
 
-# with open("story.txt") as file:
-#     print("closed", file.closed)
-#     content = file.read()
-#     print(content)
+with open("story.txt") as file:
+    print("closed", file.closed)
+    content = file.read()
+    print(content)
 
 
 # print("closed", file.closed)
 # from csv import reader, DictReader
 
-# with open("sales_data.csv") as file:
-#     # csv_list = reader(file)
-#     # print(list(csv_list))
-#     csv_dict = DictReader(file, fieldnames=["row 1", 'row 2', 'row 3'])
-#     csv_list = list(csv_dict)
-#     csv_list.pop(0)
-#     print(csv_list)
-#     # print(csv_dict.items())
+with open("sales_data.csv") as file:
+    # csv_list = reader(file)
+    # print(list(csv_list))
+    csv_dict = DictReader(file, fieldnames=["row 1", 'row 2', 'row 3'])
+    csv_list = list(csv_dict)
+    csv_list.pop(0)
+    print(csv_list)
+    # print(csv_dict.items())
 
 
 # SALES PRACTICE PROBLEM
 
 # from csv import DictReader, writer
 
-# with open("sales_data.csv") as file:
-#     # csv_list = reader(file)
-#     # print(list(csv_list))
-#     csv_dict = DictReader(file)
-#     all_sales = DictReader(file)
-#     # print("all sales data", list(all_sales))
+with open("sales_data.csv") as file:
+    # csv_list = reader(file)
+    # print(list(csv_list))
+    csv_dict = DictReader(file)
+    all_sales = DictReader(file)
+    # print("all sales data", list(all_sales))
 
-#     sum_sales = {}
+    sum_sales = {}
 
-#     for item in all_sales:
-#         # print("ITEM", item)
-#         if item["Type"] not in sum_sales:
-#             sum_sales[item['Type']] = int(item["Sales"])
-#         else:
-#             sum_sales[item['Type']] += int(item["Sales"])
+    for item in all_sales:
+        # print("ITEM", item)
+        if item["Type"] not in sum_sales:
+            sum_sales[item['Type']] = int(item["Sales"])
+        else:
+            sum_sales[item['Type']] += int(item["Sales"])
 
-#         # print("SUMMARY", sum_sales)
+        # print("SUMMARY", sum_sales)
 
-#     print("sum_sales", sum_sales)
+    print("sum_sales", sum_sales, end='|')
 
-#     with open("summary_sales.txt", "x") as results:
-#         summary_data = writer(results)
+    with open("summary_sales.txt", "x") as results:
+        summary_data = writer(results)
 
-#         summary_data.writerow(["Category", "Total Sales"])
+        summary_data.writerow(["Category", "Total Sales"])
 
-#         for key, value in sum_sales.items():
-#             summary_data.writerow([key, value])
+        for key, value in sum_sales.items():
+            summary_data.writerow([key, value])
 
 
 
@@ -298,3 +298,23 @@ with open("sales_data.csv") as file:
 
         for key, value in sum_sales.items():
             summary_data.writerow([key, value])
+
+
+
+
+my_dict = {
+"1": "Hello",
+1: "Goodbye"
+}
+print(my_dict["1"])
+print(my_dict[1])
+
+
+
+while True:
+    index = 0
+    if index == 2:
+        print("Hello")
+        break
+
+    index += 1

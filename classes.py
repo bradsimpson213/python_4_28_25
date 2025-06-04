@@ -75,3 +75,12 @@ new_listx.append(1)
 new_listx.append(2)
 print(len(new_listx))
 print(new_listx)
+
+
+matrix = [
+    [[],[],[]],
+    [],
+    [],
+    ]
+
+matrix[0][0][0]

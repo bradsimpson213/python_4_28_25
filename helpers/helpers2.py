@@ -6,3 +6,4 @@ def add_six(num):
 
 def add_eight(num):
     return num + 8
+
