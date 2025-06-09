@@ -35,6 +35,7 @@
 
 # NUMPY
 import numpy as np
+
 # list_sample = [1, 2, 3, 4, 5]
 # print(list_sample)
 # arr_1 = np.array(list_sample)
@@ -63,7 +64,7 @@ list_2d = [
 # ]
 
 # np_board = np.array(board)
-
+# board[0][0]
 # np_board[1, 1] = "X"
 # print(np_board)
 # np_board[0, 2] = "O"
@@ -120,7 +121,6 @@ list_2d = [
 
 import pandas as pd
 
-
 # data = {"foods": ["pizza", "hamburger", "salad"],
 #         "calories": [800, 1000, 400]}
 
@@ -134,10 +134,47 @@ import pandas as pd
 
 # cats_df = pd.DataFrame(cats)
 # print(cats_df)
+# df_netflix = pd.read_csv('netflix_titles.csv', sep="|", index_col=0)
+# print(df_netflix)
 
 # df_states = pd.read_csv("states.csv", names=["State Name", "Abbrev", "State Code"], header=0)
-# print(df_states)
+# # print(df_states)
 
+# print(df_states["State Name"])
 
-df_netflix = pd.read_csv('netflix_titles.csv', sep="|", index_col=0)
-print(df_netflix)
+# print(df_states.iloc[:10, :])
+
+# df_countries = pd.read_csv("countries.csv")
+# # print(df_countries)
+# df_grouped = df_countries.groupby("Region")
+# print(df_grouped["Population"].sum())
+
+# data2 = {'A': [1, 2, 3, 4, 5], 'B': ["foo", "bar", "baz", "bar", "foo"]}
+# df_grouping = pd.DataFrame(data2)
+# print(df_grouping)
+# grouped = df_grouping.groupby("B")
+# print(grouped["A"].sum())
+
+df_pop_by_state = pd.read_csv("us_pop_by_state.csv")
+# print(df_pop_by_state.head(10))
+# print(df_pop_by_state.tail())
+# print(df_pop_by_state.info())
+# print(df_pop_by_state.columns)
+# print(df_pop_by_state.size)
+# print(df_pop_by_state.shape)
+# print(df_pop_by_state.dtypes)
+# print(df_pop_by_state)
+# sorted_states = df_pop_by_state.sort_values("2020_census", ascending=False)
+# print(sorted_states)
+
+# df_houses= pd.read_csv("house_data.csv")
+# print(df_houses)
+# sorted_houses = df_houses.sort_values(["bedrooms", 'bathrooms'], ascending=False)
+# print(sorted_houses.head(20))
+
+# print(df_pop_by_state.info())
+# print(df_pop_by_state[df_pop_by_state["percent_of_total"] >= .05])
+# print(df_pop_by_state[df_pop_by_state["2020_census"].between(10_000_000, 20_000_000)])
+
+# print(df_pop_by_state[df_pop_by_state["percent_of_total"].isna()])
+print(df_pop_by_state[df_pop_by_state["state_code"].isin(['PA', "NY", "NJ"])])
