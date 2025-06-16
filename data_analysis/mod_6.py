@@ -245,15 +245,98 @@ plt.style.use("dark_background")
 # plt.show()
 
 # Bar Plots
+# foods = ["Pizza", "Burgers", "Wings", 'Salad']
+# times_cooked = [45, 67, 24, 13]
+# times_ruinbed = [3, 6, 1, 3]
+# # plt.bar(foods, times_cooked, color="green", label="Made Delicious")
+# # plt.bar(foods, times_ruinbed, color="red", label="Made Yucky", bottom=times_cooked)
+# plt.barh(foods, times_cooked, color="green", label="Made Delicious")
+# plt.barh(foods, times_ruinbed, color="red", label="Made Yucky", left=times_cooked)
+# plt.xlabel('Meals') 
+# plt.ylabel('Time prepared') 
+# plt.title('Foods Prepared') 
+# plt.legend()
+# plt.show()
+
+# Histograms
+# test_scores = [ 66, 77, 78, 78, 88, 91, 77, 78, 95, 78, 85, 81, 61, 78, 77, 68, 81, 83, 74]
+# plt.hist(test_scores, bins=15)
+# plt.title('Distribution of Test Scores')
+# plt.show()
+
+# Scatter PLot
+# x = [1, 2, 3, 4, 5]
+# y = [2, 3, 5, 7, 8]
+# plt.title("Cogs vs Sprockets")
+# plt.scatter(x, x, marker="p", color="red", label="cogs")
+# plt.scatter(x, y, marker="D", color="blue", label="sprockets")
+# plt.legend()
+# plt.show()
+
+# Pie Charts
+# labels = ["Building Improvements", "Deferred Maintenance", "Contractor Fees", "Taxes", "Site Improvements" ]
+# costs = [47_945_970, 3_752_581, 7_340_612, 3_233_392, 18_345_789]
+# colors = ["Blue", "red", 'green', "purple", "orange"]
+# plt.title("Property Costs")
+# plt.pie(costs, labels=labels, autopct="%1.2f%%", colors=colors, explode=(0, 0, 0.2, 0, 0.3) )
+# plt.show()
+
+# Box plots
+# data = [1, 2, 3, 4, 5, 6, 7, 8, 9] 
+# data_2 = [
+#     [2, 4, 6, 8, 10, 12, 14],
+#     [1, 4, 4, 5, 5, 6, 6, 7, 7, 8, 12],
+#     [1, 2, 2, 3, 3, 7],
+# ]
+# plt.boxplot(data_2)
+# plt.title("Box Plot Data")
+# plt.show()
+
+
+# Figures and Subplots, oh my!
+plt.figure(figsize=(15, 4))
+plt.suptitle("Brad's Many Charts")
+
+plt.subplot(1,3,1)
 foods = ["Pizza", "Burgers", "Wings", 'Salad']
 times_cooked = [45, 67, 24, 13]
 times_ruinbed = [3, 6, 1, 3]
-# plt.bar(foods, times_cooked, color="green", label="Made Delicious")
-# plt.bar(foods, times_ruinbed, color="red", label="Made Yucky", bottom=times_cooked)
-plt.barh(foods, times_cooked, color="green", label="Made Delicious")
-plt.barh(foods, times_ruinbed, color="red", label="Made Yucky", left=times_cooked)
+plt.bar(foods, times_cooked, color="green", label="Made Delicious")
+plt.bar(foods, times_ruinbed, color="red", label="Made Yucky", bottom=times_cooked)
 plt.xlabel('Meals') 
 plt.ylabel('Time prepared') 
 plt.title('Foods Prepared') 
 plt.legend()
+
+plt.subplot(1,3,2)
+plt.plot(
+    [1, 2, 3, 4, 5], 
+    [2, 4, 6, 8, 10], 
+    color='blue', 
+    linewidth=2, 
+    linestyle="--",
+    label="Regular Learning"
+)
+plt.plot(
+    [1, 2, 3, 4, 5], 
+    [4, 8, 12, 16, 20], 
+    color='orange', 
+    linewidth=3, 
+    label="Game Coding"
+)
+plt.title("Brads Fun Graph")
+plt.xlabel("Hours")
+plt.ylabel("Fun Had")
+plt.legend()
+plt.xticks([1, 2, 3, 4, 5])
+plt.yticks([6, 12], labels=['6K', '12K'])
+
+plt.subplot(1, 3, 3)
+labels = ["Building Improvements", "Deferred Maintenance", "Contractor Fees", "Taxes", "Site Improvements" ]
+costs = [47_945_970, 3_752_581, 7_340_612, 3_233_392, 18_345_789]
+colors = ["Blue", "red", 'green', "purple", "orange"]
+plt.title("Property Costs")
+plt.pie(costs, labels=labels, autopct="%1.2f%%", colors=colors, explode=(0, 0, 0.2, 0, 0) )
 plt.show()
+
+

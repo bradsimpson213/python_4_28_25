@@ -379,9 +379,146 @@
 # t1, t3 = t2, t4
 # print(t1)
 
-data = (1, ) * 3
-print(data)
+# data = (1, ) * 3
+# print(data)
 # data[0] = 2
 # print(data)
 
 # do # 39 next class
+
+# fruits1 = ["Apple", "Pear", "Banana"]
+# fruits2 = fruits1
+# fruits3 = fruits1[:]
+
+# fruits2[0] = "Cherry"
+# fruits3[1] = "Orange"
+# print("FRUITS", fruits1, fruits2, fruits3)
+# res = 0
+
+# for i in (fruits1, fruits2, fruits3):
+#     if i[0] == "Cherry":
+#         res += 1
+    
+#     if i[1] == "Orange":
+#         res += 10
+
+# print(res)
+# print('Welcome to the snowman game!')
+# user_guess = input('Guess a letter...')
+
+# if user_guess in "abcdefghijklmnopqrstuvwxyz":
+
+
+
+# list1 = [2, 7, 1, 4]
+# # sorted(list1)
+# list1.sort()
+# print(list1)
+
+# sorted = sorted(list1)
+# print(sorted)
+
+# posts = []
+# post1 = 
+# posts.append({
+#     "date": "6/16/26",
+#     "caption": "Look at my amazing picture!",
+#     "image": "https://someimageurl",
+# })
+# post2 = {
+#     "date": "6/15/26",
+#     "caption": "Look I do fun things",
+#     "image": "https://someimageurl",
+# }
+# posts.insert(0, post2)
+# print(posts)
+
+# vals = [0, 1, 2]
+# vals[0], vals[1] = vals[1], vals[2]
+# print(vals)
+
+# data = ['abc', 'def', 'adcde', 'efg']
+# data2 = [1, 4, 6, 7]
+# print(max(data))
+# print(min(data))
+# data.reverse()
+# print(data)
+# print(data2[::-1])
+
+# # 46 was next...
+# my_list_1 = [1, 2, 3]
+# my_list_2 = []
+
+# for val in my_list_1:
+#     my_list_2.insert(0, val)
+#     print(my_list_2)
+
+# print(my_list_2)
+
+
+# data = [10, 2, 1, 7, 5, 6, 4, 3, 9, 8]
+
+# def find_high_and_low(nums):
+#     """function that returs the highest and lowest values in a list"""
+#     # nums.sort()
+#     # return nums[-1], nums[0]
+#     return max(nums), min(nums)
+
+# high, low = find_high_and_low(data)
+
+# print(f"The highest number is {high} and the lowest number is {low}")
+
+# my_list = ["Mary", 'had', 'a', 'little', 'lamb']
+
+# def my_list1(my_list):
+#     del my_list[3]
+#     my_list[3] = 'ram'
+
+
+# print(my_list1(my_list))
+# print(my_list)
+
+# data = ['Peter', 'Paul', "Mary"]
+# print(data[int(-1 / 2)])
+# print(-1/2)
+# print(int(-1/2))
+
+# data = (1, 2, 3, 4)
+# print(data[-2:-1])
+# data = data[-2:-1]
+# print(data[-1])
+# data = data[-1]
+# print(data)
+
+# data = {1: 0, 2: 1, 3: 2, 0: 1}
+# x = 0 # 0
+
+# for _ in range(len(data)): # 0 1 0 1
+#     print("inside for loop", x)
+#     x = data[x] # 1 0 1 0
+
+# print(x)
+
+# list1 = ['Peter', 'Paul', 'Mary']
+
+# def list(data):
+#     del data[1]
+#     data[1]  = "Jane"
+#     return data
+
+# print(list(list1))
+
+# data = {}
+# data['TWO'] = [1, 2]
+# # data = {"2": [1, 2]}
+# data['ONE'] = [3, 4]
+# print(data)
+
+# print(data['TWO'])
+
+# print(data.keys())
+
+# for key in data.keys():
+#     print(data[key][1], end=" ")
+
+# start with # 53 next class
