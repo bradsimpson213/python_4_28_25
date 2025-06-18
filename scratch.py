@@ -521,4 +521,159 @@
 # for key in data.keys():
 #     print(data[key][1], end=" ")
 
-# start with # 53 next class
+# start with # 54 next class.
+
+# data1 = (1, 2)
+# data2 = (3, 4)
+# print([data1 + data2])
+# [print(sum(x)) for x in [data1 + data2]]
+
+# vals = [0, 1, 2]
+# vals.insert(0, 1)
+# print(vals)
+# del vals[1]
+# print(vals)
+
+# print(sum(vals))
+
+# data = set([1, 2, 2, 3, 3, 3, 4, 4, 4, 4])
+# print(data)
+# print(len(data))
+
+# my_list = [x * x for x in range(5)]
+# print(list(range(5)))
+# print(my_list)
+
+# def fun(lst):
+#     del lst[lst[2]]
+#     return lst
+
+# print(fun(my_list))
+
+# a = [1, 2, 3, 4, 5]
+# print(a[3:0:-1])
+
+# nums = [1, 2]
+# vals = nums[:]
+# # vals = nums
+# # vals = [*nums]
+# vals.append(1)
+# nums.append("X")
+# print("NUMS", nums, "VALS", vals)
+
+# data = {"1": "0", "0": "1"}
+
+# # print(data.values())
+
+# for d in data.values():
+#     print(d, end=" ")
+
+# dictionary = {}
+
+# my_list = ['a', 'b', 'c', 'd']
+
+# for i in range(len(my_list)):
+#     dictionary[my_list[i]] = (my_list[i],)
+
+# print(dictionary) # {'a': ('a',), 'b': ('b',), 'c': ('c',), 'd': ('d',)}
+
+# print(sorted(dictionary.keys()))
+
+# for i in sorted(dictionary.keys()):
+#     k = dictionary[i]
+#     print(k[0])
+
+# data = [
+#     [1, 2, 3, 4],
+#     [5, 6, 7, 8],
+#     [9, 10, 11, 12],
+#     [13, 14, 15, 16],
+# ]
+
+# for i in range(0, 4): #$ [0, 1, 2, 3]
+#     print(data[i].pop(), end=" ")
+
+# print(data)
+
+# data = [[0, 1, 2, 3] for i in range(2)] # [0, 1]
+# print(data)
+# print(data[2][0])
+
+# numbers = [1, 2, 3, 4, 5]
+# nums = numbers[2: ]
+# print(nums)
+
+# employees = ["E", "E", "E", "M", "M"]
+# print(employees[0:3])
+# print(employees[:3])
+# print(employees[:-2])
+
+
+# data = [ 1, 2, 3, 4, 5, 6 ]
+
+# for i in range(1, 6):
+#     data[i - 1] = data[i]
+
+# print("Data after loop", data)
+
+# for i in range (0, 6):
+#     print(data[i], end=" ")
+
+# x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# print(x[::2])
+# x[::2] = 10, 20, 30, 40, 50
+# print(x)
+
+# x1, x2, x3 = [2, 3]
+
+# box = {}
+# jars = {}
+# crates = {}
+
+# box['biscuit'] = 1
+# box['cake'] = 1
+
+# jars['jam'] = 4
+
+# crates['box'] = box
+# crates['jars'] = jars
+
+# print("box", box, "jars", jars, "crates", crates)
+# print(len(crates[box]))
+
+
+# data = "Hello@Peter!!"
+# print(data.lower())
+
+# data = [1, 5, 10, 19, 55, 30, 55, 99]
+# # data = list(set(data))
+# # data.remove(19)
+# # data.remove(55)
+# # data.remove(55)
+# # data.remove(30)
+# data.pop(3)
+# data.pop(3)
+# data.pop(3)
+# data.pop(3)
+# # data.sort()
+# print(data)
+# # [1, 5, 10, 99]
+
+# data1 = "a", 'b'
+# data2 = ("a", 'b')
+
+# data3 = {"3": 1}
+
+# print(data1 == data2)
+
+# l1 = [1, 2, 3]
+
+# for v in range(len(l1)):  # [0, 1, 2]
+#     l1.insert(1, l1[v])
+#     print("val", l1[v], "list", l1)
+
+# print(l1)
+
+t = [('A',1),('B',2),('C',3)]
+d =dict(t)
+print(d)
