@@ -674,6 +674,259 @@
 
 # print(l1)
 
-t = [('A',1),('B',2),('C',3)]
-d =dict(t)
-print(d)
+# t = [('A',1),('B',2),('C',3)]
+# d =dict(t)
+# print(d)
+
+# continue with # 74 next time
+
+# my_list = [0 for i in range(1, 3)]
+# print(my_list)
+# print(len(my_list))
+
+# data = { "z": 23, "x": 7, "y": 42 }
+# sorted_data =  sorted(data)
+# print(sorted_data)
+
+# one, two, _ = (1, 2, 3)
+
+# for i in sorted(data):\
+#     print(data[i], end=" ")
+
+# x = {(1, 2): 1, (2, 3): 2}
+# print(x[1, 2])
+
+# nums = [1, 2, 3]
+# vals = nums
+# print("NUMS", nums, 'VALS', vals)
+# del vals[:]
+# print("NUMS", nums, 'VALS', vals)
+
+
+# data = {}
+# data[1] = 1
+# data['1'] = 2
+# data[1.0] = 4
+# print(data)
+
+# print( 1 == 1.0)
+# res = 0
+
+# for d in data:
+#     res += data[d]
+
+# print(res)
+
+# nums = [1, 2, 3, 4, 5, 6, 7, 8]
+
+# evens = [x for x in nums if x % 2 == 0]
+# print(list(evens))
+
+# z = 3
+# y = 7
+# x = y < z and z > y or y > z and z < y
+# #    False     False    True     True
+# # False or True
+
+# print(x)
+
+# print(True and True)
+# print(False and True)
+# print(True and False)
+# print(False and False)
+
+# print(True or True)
+# print(False or True)
+# print(True or False)
+# print(False or False)
+
+# print(False == (not True))
+# print( not True)
+
+# x = 1 // 5 + 1 / 5
+# print((1 // 5, "+", 1 / 5))
+# print(x)
+
+# print(1 == 1.0)
+
+# print(2 != 3) 
+
+# print(123 + 0.0)
+
+# print(3 / 5)
+
+# x = 2
+# y = 1
+# x *= y + 1
+# print(x)
+
+# x += 1
+
+# x -= 1
+
+# /=  //= %= **=
+
+
+# x = 1 / 2 + 3 // 3 + 4 ** 2
+# #      0.5     1       16
+# # PEMDAS
+# print(x)
+
+
+# def main(a, b, c, d):
+#     value = a + b * c - d
+#     return value
+
+# value = (a + (b * c)) - d
+
+# a = 1
+# b = 0
+# x = a or b
+# y = not(a and b)
+# print(x, y)
+# print(x + y)
+
+# x = 28
+# y = 8
+# print(x / y)
+# print(x // y)
+# print(x % y)
+# print(4**3) # 4 * 4 * 4
+
+# 1 | 3.0
+# 2 | 3
+# 3 | 2
+
+
+# print(1 // 6)
+
+# x = True
+# y = False
+# x = x or y
+# print(x, y)
+# y = x and y
+# print(x, y)
+# x = x or y
+# print(x, y)
+
+# text = "Brad"
+# text += " ate a sandwich"
+# text = text + " ate a sandwich"
+# print(text)
+
+
+# num = 1 
+# num += 2
+# num = num + 2
+# print(num)
+
+# PEMDAS
+
+# x = 9
+# y = 12
+# result = x // 2 * 2 / 2 + y % 2 ** 3
+# # 9 // 2 * 2 / 2 + 12 % 2 ** 3   # variables
+# # 9 // 2 * 2 / 2 + 12 % 8 # exponents
+# # 9 // 2.0 + 4  # division 
+# # 4.0 + 4 # addition
+# print(result)
+# print(9 // 2.0)
+
+# x = 1
+# x = x == x
+
+# print(x)
+
+# a = 10
+# b = 20
+# c =  a > b  # False
+# print(not(c))
+
+
+# PEMDAS
+# x = 1 + 1 // 2 + 1 / 2 + 2
+# #         0         .5
+# print(x)
+
+# z = 3
+# y = 7
+# x = y == z and y > z or z > y and z != y
+# #     False and True or False and True
+# #            False or False
+# print(x)
+# print(1 / 1)
+
+# list1 = [3, 7, 23, 42]
+# list2 = [3, 7, 23, 42]
+
+# print(list1 is list2)
+# print(list1 == list2)
+
+# print(False is 1)
+# print(False == 1)
+# print(id(list1))
+# print(id(list2))
+
+
+# print(3 * 'abc' + 'xyz')
+# s = "abc"
+# s += "xyz"
+
+# nums = [3, 7, 23, 42]
+# alphas = ['p', 'p', 'm', 'j']
+
+# print(nums is alphas)
+# print(nums == alphas)
+
+# nums = alphas
+
+# print(nums is alphas)
+# print(nums == alphas)
+
+# x, y, z = (3, 2, 1) 
+# print(x, y, z)
+# z, y, x = x, y, z
+# print(x, y, z)
+# x = 1
+# print(0 + 0 + 0 + 0 + x)
+
+# res = str(bool(1) + float(12) / float(2))
+# print(type(res))
+# print(bool(1))
+
+# print('Mike' > 'Mikey')
+# print(ord('y'))
+# print(ord('M'))
+# print(ord('m'))
+
+# x = [0, 1, 2]
+# x[0], x[2] = x[2], x[0]
+# x[0], x[2] = 2, 0
+# print(x)
+
+# continue from 128
+
+# x = float('23.42')
+# print(type(x))
+
+# x = 7
+# y = x % 2
+# y += 1
+
+# print(y)
+
+print("is" in "This IS Python code.")
+
+x = 42
+y = 42
+print(x is not y)
+
+x = "Peter Wellert"
+y = "Peter Wellert".lower()
+print(x is y)
+
+print('t' in 'Peter')
+
+x = ["Peter", 'Paul', 'Mary']
+y = ["Peter", 'Paul', 'Mary']
+print(x is y)
